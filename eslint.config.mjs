@@ -20,3 +20,14 @@ export default createConfigForNuxt({
     ],
   },
 })
+
+  .append({
+    rules: {
+    // Allow custom order for Nuxt config keys
+      'nuxt/nuxt-config-keys-order': 'off',
+      // Allow index.vue in pages directory (Nuxt convention)
+      'vue/multi-word-component-names': ['error', {
+        ignores: ['index'],
+      }],
+    },
+  })
